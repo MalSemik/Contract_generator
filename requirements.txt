@@ -1,0 +1,3 @@
+num2words
+docx-mailmerge
+PySimpleGUI
