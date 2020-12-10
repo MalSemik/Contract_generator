@@ -6,16 +6,16 @@ import PySimpleGUI as sg
 
 
 def fill_template(name, hiring, address1, address2, remuneration, gender, num, clause1, clause2, clause3):
-    template = "ABB_template.docx"
+    template = "ABB_iT_LETTERA INDETERMINATO_impiegato.docx"
     document = MailMerge(template)
     print(document.get_merge_fields())
     # {'Date', 'Address1', 'hiring', 'Klauzula3', 'Name', 'Address2', 'Klauzula1', 'remuneration', 'salutation', 'Klauzula2'}
     remuneration = int(remuneration)
     remuneration_word = num2words(remuneration, lang='it') + "/00"
     if gender == 'M':
-        salutation = "Sig."
+        salutation = "Gentile Sig."
     else:
-        salutation = "Sig.ra"
+        salutation = "Gentile Sig.ra"
     if clause1:
         clause1 = "To jest Klauzula 1\n \n"
     else:
@@ -36,7 +36,7 @@ def fill_template(name, hiring, address1, address2, remuneration, gender, num, c
         Address1=address1,
         Address2=address2,
         hiring=hiring,
-        Name=name,
+        name=name,
         remuneration=str(remuneration),
         remuneration_word=remuneration_word,
         Klauzula1=clause1,
