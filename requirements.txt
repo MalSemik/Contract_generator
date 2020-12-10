@@ -1,3 +1,5 @@
 num2words
 docx-mailmerge
 PySimpleGUI
+pandas
+xlrd
